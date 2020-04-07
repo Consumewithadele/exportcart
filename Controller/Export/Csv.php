@@ -76,8 +76,6 @@ class Csv extends Action
             throw new NotFoundException(__('Page not found.'));
         }
 
-        $recipient = $this->scopeConfig->getValue(Wholesale::WHOLESALE_REGISTER_EMAIL_XML_PATH, 'store');
-
         $fileName = 'cart.csv';
         $list = [['Product', 'SKU', 'QTY', 'Pice']];
         $filePath = $this->directoryList->getPath(DirectoryList::VAR_DIR)
